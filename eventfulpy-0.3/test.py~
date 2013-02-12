@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+import urllib
+import xml.dom.minidom
+from xml.dom.minidom import Node
+
+xmlfile = urllib.urlopen("http://api.eventful.com/rest/events/search?...&location=Seattle+WA&date=Future&app_key=WDL5Mhk7MWmxX6BM") 
+doc = xml.dom.minidom.parse(xmlfile) #"bus.xml")
+ 
+'''
+for node in doc.getElementsByTagName("event"):
+  id = node.getAttribute("id")
+  title=""
+  # the title is a sub tag within the event.
+  # so each event component including subcomponents is a "node"
+  # with each node, we grab the title elements within it, then the 0th item. This is titleNode
+  # each titlenode has childNodes, one of which is the TEXT_NODE
+  # which is the actual data of the title, we get its data field and that's the title
+  
+  titleNodes = node.getElementsByTagName("title")
+  titleNode = titleNodes.item(0)
+  for node2 in titleNode.childNodes:
+    if node2.nodeType == Node.TEXT_NODE:
+      title = node2.data
+  #print id
+  print title
+'''
+def handleEvent(event):
+	print getText(event.getElementsByTagName("title")[0])
+
+def getText(nodeList):
+	rc = []
+	for node in nodelist:
+		if node.nodeType == node.TEXT_NODE:
+			rc.append(node.data)
+	return ''.join(rc)
+
+handleEvent(doc)
+
+
