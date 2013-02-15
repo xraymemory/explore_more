@@ -78,7 +78,7 @@ h3{
 	font-family:"LeagueGothic", Helvetica, Arial, sans-serif;
 	font-size: 30px;
 	color: white;
-	text-shadow: none;
+	text-shadow: 0px 2px 3px #666;
 	text-decoration: none;
 	font-style: none;
 	font-weight: normal;	
