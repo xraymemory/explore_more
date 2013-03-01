@@ -1,4 +1,0 @@
-LASTFM = '38d3aa1ffc90b23989a8cc1aec31c78b'
-EVENTFUL = 'WDL5Mhk7MWmxX6BM'
-GOOGLE = 'AIzaSyDZC-KPF0mIm7erxql-GXxzOKokoOXDCyE'
-SECRET = 'teehee'
