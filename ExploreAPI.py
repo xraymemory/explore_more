@@ -40,7 +40,7 @@ class ExploreApi(object):
     def _event_in_radius(self, item, location, radius):
         lat, lon = gmaps.address_to_latlng(location)
         try:
-            if (abs(item.lat - lat) < radius) and (abs(item.lon - lon) < radius):
+            if (abs(item.lat - int(lat)) < radius) and (abs(item.lon - int(lon)) < radius):
                 return True
             else:
                 return False

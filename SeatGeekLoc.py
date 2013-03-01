@@ -1,5 +1,3 @@
-import urllib2
-import simplejson
 from ExternalApiEvents import *
 
 

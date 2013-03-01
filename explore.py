@@ -50,13 +50,13 @@ def submit():
         address = request.form.get('event_address')
         time = request.form.get('event_time')
         lat, lon = gmaps.address_to_latlng(address)
-
+        print lat
         event = ExploreEvent(
             title=title,
             address=address,
             time=time,
-            lat=lat,
-            lon=lng)
+            lat=str(lat),
+            lon=str(lon))
         event.save()
         return redirect(url_for("map", query=address))
 
